@@ -38,7 +38,7 @@ class Course {
       about: courseMap['about'],
       id: courseMap['id'],
       imageLink: courseMap['imageLink'],
-      creator: Creator.fromMap(courseMap['creator']),
+      creator: Creator().fromMap(courseMap['creator']),
       modules: modules,
       studentCount: courseMap['studentCount'],
       lessonCount: courseMap['lessonCount'],
