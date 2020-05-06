@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "579653534936",
+    "firebase_url": "https://prep4life-b552b.firebaseio.com",
+    "project_id": "prep4life-b552b",
+    "storage_bucket": "prep4life-b552b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579653534936:android:968f4b433110780d95c3ad",
+        "android_client_info": {
+          "package_name": "com.edapt.prep4life"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579653534936-pmo76ugacdg3a35lv7nq2bigvdbhsl62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRBCMmdBiab03mSgQZGPvZv-9Lk4JMNoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579653534936-pmo76ugacdg3a35lv7nq2bigvdbhsl62.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
