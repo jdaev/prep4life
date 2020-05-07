@@ -28,6 +28,7 @@ class _FeedPageState extends State<FeedPage> {
     return StreamBuilder<List<Course>>(
       stream: database.coursesStream(),
       builder: (context, snapshot) {
+        
         return ListItemsBuilder<Course>(
           snapshot: snapshot,
           itemBuilder: (context, course) => Dismissible(

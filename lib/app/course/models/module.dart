@@ -8,7 +8,7 @@ class Module {
 
   Module fromMap(moduleMap) {
     this.moduleName = moduleMap['moduleName'];
-    for (Map lessonMap in moduleMap['lessons']) {
+    for (Map lessonMap in moduleMap['lesson']) {
       this.lessons.add(Lesson().fromMap(lessonMap));
     }
     return this;

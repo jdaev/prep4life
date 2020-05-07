@@ -1,4 +1,7 @@
 class FirestorePath {
-  static String course(String uid, String courseId) => 'courses/$courseId';
-  static String courses(String uid) => 'courses';
+  static String course(String courseId) => 'courses/$courseId';
+  static String courses() => 'courses';
+  static String enrolledCourse(String uid, String courseId) => 'users/$uid/courses/$courseId';
+  static String user(String uid) => 'users/$uid';
+  static String enrolledCourses(String uid) => 'users/$uid/courses';
 }

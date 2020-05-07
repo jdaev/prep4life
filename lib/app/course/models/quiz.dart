@@ -1,7 +1,7 @@
 class Question {
   String question;
   String answer;
-  List<String> incorrectAnswers;
+  List incorrectAnswers;
   double position;
 
   Question();
@@ -10,7 +10,7 @@ class Question {
     this.question = question['question'];
     this.answer = question['answer'];
     this.incorrectAnswers = question['incorrectAnswers'];
-    this.position = question['position'];
+    this.position = question['position'].toDouble();
     return this;
   }
 }

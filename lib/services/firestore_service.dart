@@ -32,7 +32,9 @@ class FirestoreService {
       query = queryBuilder(query);
     }
     final Stream<QuerySnapshot> snapshots = query.snapshots();
+    
     return snapshots.map((snapshot) {
+      
       final result = snapshot.documents
           .map((snapshot) => builder(snapshot.data, snapshot.documentID))
           .where((value) => value != null)
@@ -40,6 +42,7 @@ class FirestoreService {
       if (sort != null) {
         result.sort(sort);
       }
+
       return result;
     });
   }

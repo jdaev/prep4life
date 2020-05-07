@@ -13,19 +13,30 @@ class FirestoreDatabase {
 
   final _service = FirestoreService.instance;
 
-  
-
-  Stream<Course> courseStream({@required String courseId}) => _service.documentStream(
-        path: FirestorePath.course(uid, courseId),
+  Stream<Course> courseStream({@required String courseId}) =>
+      _service.documentStream(
+        path: FirestorePath.course(courseId),
         builder: (data, documentId) => Course.fromMap(data, documentId),
       );
 
   Stream<List<Course>> coursesStream() => _service.collectionStream(
-        path: FirestorePath.courses(uid),
+        path: FirestorePath.courses(),
+        builder: (data, documentId) {
+          return Course.fromMap(data, documentId);
+        },
+      );
+
+  Stream<Course> enrolledCourseStream({@required String courseId}) =>
+      _service.documentStream(
+        path: FirestorePath.enrolledCourse(uid, courseId),
         builder: (data, documentId) => Course.fromMap(data, documentId),
       );
 
- 
+  Stream<List<Course>> enrolledCoursesStream() => _service.collectionStream(
+        path: FirestorePath.enrolledCourses(uid),
+        builder: (data, documentId) => Course.fromMap(data, documentId),
+      );
+
   // Stream<List<Entry>> entriesStream({Course course}) =>
   //     _service.collectionStream<Entry>(
   //       path: FirestorePath.entries(uid),
