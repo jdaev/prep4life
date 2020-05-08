@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:prep4life/app/auth_widget.dart';
+import 'package:prep4life/app/course/course_page.dart';
+import 'package:prep4life/app/course/models/course.dart';
 import 'package:prep4life/app/sign_in/email_password/email_password_sign_in_page.dart';
 
 class Routes {
   static const authWidget = '/';
   static const emailPasswordSignInPageBuilder =
       '/email-password-sign-in-page-builder';
-  static const editJobPage = '/edit-job-page';
-  static const entryPage = '/entry-page';
+  static const coursePage = '/course-page';
+  static const lessonPage = '/lesson-page';
 }
 
 class Router {
@@ -25,12 +27,13 @@ class Router {
           settings: settings,
           fullscreenDialog: true,
         );
-      // case Routes.editJobPage:
-      //   return MaterialPageRoute<dynamic>(
-      //     builder: (_) => EditJobPage(job: args),
-      //     settings: settings,
-      //     fullscreenDialog: true,
-      //   );
+      case Routes.coursePage:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => CoursePage(course: args),
+          settings: settings,
+          fullscreenDialog: false,
+        );
+      
       // case Routes.entryPage:
       //   final Map<String, dynamic> mapArgs = args;
       //   final Job job = mapArgs['job'];
