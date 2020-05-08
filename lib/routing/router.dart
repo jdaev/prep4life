@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:prep4life/app/auth_widget.dart';
 import 'package:prep4life/app/course/course_page.dart';
+import 'package:prep4life/app/course/lesson_page.dart';
 import 'package:prep4life/app/course/models/course.dart';
 import 'package:prep4life/app/sign_in/email_password/email_password_sign_in_page.dart';
 
@@ -33,7 +34,17 @@ class Router {
           settings: settings,
           fullscreenDialog: false,
         );
-      
+      case Routes.lessonPage:
+        final Map<String, dynamic> mapArgs = args;
+        return MaterialPageRoute<dynamic>(
+          builder: (_) => LessonPage(
+            course: mapArgs['course'],
+            lessonIndex: mapArgs['lessonIndex'],
+            moduleIndex: mapArgs['moduleIndex'],
+          ),
+          settings: settings,
+          fullscreenDialog: false,
+        );
       // case Routes.entryPage:
       //   final Map<String, dynamic> mapArgs = args;
       //   final Job job = mapArgs['job'];

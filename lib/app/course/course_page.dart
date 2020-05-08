@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prep4life/app/course/lesson_page.dart';
 import 'package:prep4life/app/course/models/lesson.dart';
 import 'package:prep4life/routing/router.dart';
 
@@ -93,10 +94,17 @@ class _CoursePageState extends State<CoursePage> {
             ),
             for (Lesson lesson in widget.course.modules[index].lessons)
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24, vertical: 4),
-                child: Text(lesson.lessonName),
-              )
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 4),
+                  child: ListTile(
+                    title: Text(lesson.lessonName),
+                    onTap: () => LessonPage.show(context, {
+                      'course': widget.course,
+                      'lessonIndex':
+                          widget.course.modules[index].lessons.indexOf(lesson),
+                      'moduleIndex': index,
+                    }),
+                  ))
           ],
         );
       },
