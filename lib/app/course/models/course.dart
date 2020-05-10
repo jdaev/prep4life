@@ -57,4 +57,15 @@ class Course {
       documentId: documentId,
     );
   }
+
+  Map enrollDataMap(){
+    return {
+      'courseName':this.courseName,
+      'id':this.id,
+      'imageLink':this.imageLink,
+      'currentModule':0,
+      'currentLesson':0,
+      'documentId':this.documentId,      
+    };
+  }
 }
