@@ -47,7 +47,7 @@ class Course {
     return Course(
       courseName: courseMap['courseName'],
       about: courseMap['about'],
-      id: courseMap['id'],
+      id: courseMap['courseId'],
       imageLink: courseMap['imageLink'],
       creator: Creator().fromMap(courseMap['creator']),
       modules: modules,

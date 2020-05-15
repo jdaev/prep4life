@@ -6,7 +6,7 @@ class Creator {
   Creator fromMap(creator) {
     this.name = creator['name'];
     this.imageLink = creator['imageLink'];
-    this.rank = creator['rank'];
+    this.rank = creator['designation'];
     return this;
   }
 }

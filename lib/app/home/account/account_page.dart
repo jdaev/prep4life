@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:prep4life/app/course/saved_course_page.dart';
 import 'package:prep4life/common_widgets/avatar.dart';
 import 'package:prep4life/common_widgets/show_alert_dialog.dart';
 import 'package:prep4life/common_widgets/show_exception_alert_dialog.dart';
@@ -59,13 +60,13 @@ class AccountPage extends StatelessWidget {
         ],
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(130.0),
-          child: _buildUserInfo(user),
+          child: _buildUserInfo(user,context),
         ),
       ),
     );
   }
 
-  Widget _buildUserInfo(User user) {
+  Widget _buildUserInfo(User user, BuildContext context) {
     return Column(
       children: [
         Avatar(
@@ -81,6 +82,14 @@ class AccountPage extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
         SizedBox(height: 8),
+        FlatButton(
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => SavedCoursePage(
+                        courseId: 'qwe',
+                      )));
+            },
+            child: Text('Saved'))
       ],
     );
   }

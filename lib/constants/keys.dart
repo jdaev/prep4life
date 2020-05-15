@@ -7,5 +7,6 @@ class Keys {
   static const String accountTab = 'accountTab';
   static const String logout = 'logout';
   static const String alertDefault = 'alertDefault';
+  static const String vimeoAccessToken = 'a954010e7173a24a28c6acc96616455f';
   static const String alertCancel = 'alertCancel';
 }

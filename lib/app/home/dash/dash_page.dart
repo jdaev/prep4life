@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prep4life/app/course/course_page.dart';
 
 class DashPage extends StatefulWidget {
   @override
@@ -8,8 +9,6 @@ class DashPage extends StatefulWidget {
 class _DashPageState extends State<DashPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-    );
+    return Container();
   }
 }
